@@ -1,0 +1,28 @@
+{
+    "mappings": {
+        "tweet": {
+            "properties": {
+                "keyword": {
+                    "type": "string",
+                    "analyzer": "standard"
+                },
+                "coordinates": {
+                    "type": "geo_point"
+                },
+                "author": {
+                    "type": "string"
+                },
+                "timestamp": {
+                    "type": "date",
+                    "format": "EE MMM d HH:mm:ss Z yyyy"
+                },
+                "text": {
+                    "type": "string"
+                },
+                "sentiment": {
+					"type": "string"
+				}
+            }
+        }
+    }
+}

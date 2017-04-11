@@ -1,0 +1,67 @@
+<!-- Modified based off of code found at: https://github.com/keyu-lai/TwitterMap2 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cryptocurrency TweetMap</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='bower_components/bootstrap/dist/css/bootstrap.min.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css') }}" />
+    <style type="text/css">
+        html, body { 
+            height: 100%;
+        }
+        #map { 
+            height: 100%; 
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">Cryptocurrency TweetMap</a>
+            </div>
+
+            <ul class="nav navbar-nav">
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Keyword<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Trump</a></li>
+                            <li><a href="#">ethereum</a></li>
+                            <li><a href="#">bitcoin</a></li>
+                            <li><a href="#">factom</a></li>
+                            <li><a href="#">litecoin</a></li>
+                            <li><a href="#">monero</a></li>
+                            <li><a href="#">ripple</a></li>
+                            <li><a href="#">zcash</a></li>
+                            <li><a href="#">golem</a></li>
+                            <li><a href="#">the</a></li>
+                        </ul>
+                </li>
+            </ul>
+            <p id="newTweets" class="navbar-text">New Tweets: 0</p>
+            <ul class="nav navbar-nav navbar-right">
+                <button type="button" class="btn btn-default navbar-btn">Reset</button>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="map"></div>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='bower_components/jquery/dist/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='bower_components/moment/min/moment.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js') }}"></script>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgviOH3VaP0rQc5c5VxLSUBRm7obCmi9o
+        &libraries=visualization&callback=initMap">    
+    </script>
+<script type="text/javascript" src="{{ url_for('static', filename='map.js') }}"> </script>
+
+</body>
+</html>
